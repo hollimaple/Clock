@@ -1,43 +1,50 @@
-/* アナログ時計のスタイル */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
 .clock {
-    width: 200px;
-    height: 200px;
-    border: 5px solid black;
+    width: 80vmin;  /* 画面の幅に応じてサイズ調整 */
+    height: 80vmin; /* 画面の高さに応じてサイズ調整 */
+    border: 2vmin solid black;
     border-radius: 50%;
     position: relative;
-    margin: 50px auto;
 }
 
 .hand {
     position: absolute;
     bottom: 50%;
     left: 50%;
-    width: 50%;
-    background-color: black;
     transform-origin: 0% 0%;
     transform: translate(-50%, 0%);
 }
 
 .hour {
-    height: 6px;
+    width: 30%;
+    height: 8px;
     background-color: black;
 }
 
 .minute {
-    height: 4px;
+    width: 40%;
+    height: 6px;
     background-color: grey;
 }
 
 .second {
-    height: 2px;
+    width: 45%;
+    height: 4px;
     background-color: red;
 }
 
-/* デジタル時計のスタイル */
 #digitalClock {
-    font-size: 24px;
-    font-family: 'Arial', sans-serif;
+    font-size: 8vmin; /* ビューポートに応じてフォントサイズを調整 */
     color: #333;
     text-align: center;
-    margin-top: 20px;
 }
